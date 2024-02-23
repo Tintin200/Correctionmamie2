@@ -1,0 +1,11 @@
+{% extends "base.html.twig" %}
+			{% block title %}{{parent()}}Types Cafés
+			{% endblock %}
+		{% block body %}Liste des Cafés
+
+        {% for typeCafe in typeCafes %}
+        <br/>
+            {{typeCafe.designation | capitalize}}
+            {{typeCafe.origine | capitalize}}
+        {% endfor %}
+		{% endblock %}
